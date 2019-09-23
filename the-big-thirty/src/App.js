@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import ActivityList from './ActivityList';
 
 const dummyData = [
   {
@@ -44,12 +45,15 @@ const dummyData = [
   },
 ]
 
+console.log(dummyData);
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         The Big Thirty
       </header>
+      <ActivityList activityList={dummyData}/>
     </div>
   );
 }
