@@ -20,3 +20,14 @@
 .App-link {
   color: #09d3ac;
 }
+
+.bucketListForm {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  margin: 0 auto;
+}
+
+#formControl > label:nth-child(1) {
+  margin-left: 10px;
+}
