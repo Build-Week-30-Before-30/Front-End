@@ -1,9 +1,9 @@
 import React from "react";
-import styled from 'styled-components';
-import {Button} from "./Button";
+import styled from "styled-components";
+import { Button } from "./Button";
 
-const StyledActivityCard = styled.div`
-  display:flex;
+const StyledActivityCard2 = styled.div`
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 15px 15px;
@@ -14,6 +14,7 @@ const StyledActivityCard = styled.div`
 `;
 
 const StyledHeading = styled.div`
+  height: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,46 +23,43 @@ const StyledHeading = styled.div`
 `;
 
 const StyledDetails = styled.div`
+  text-align: left;
+`;
+
+const StyledButtons = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 50px;
   width: 100px;
   border-left: 1px solid lightgray;
-
-`;
-
-const ButtonContainer = styled.div`
-  border-top: 1px solid lightgray;
-  border-bottom: 1px solid lightgray;
 `;
 
 const StyledDescrition = styled.div`
+  border-top: 1px solid lightgray;
   padding: 10px;
   text-align: left;
 `;
 
-export default function ActivityCard(props) {
+export default function ActivityCard2(props) {
   const { title, description, date, category } = props;
   return (
-    <StyledActivityCard>
+    <StyledActivityCard2>
       <StyledHeading>
-        <div>
-          <h3>{title}</h3>
-        </div>
         <StyledDetails>
+          <h3>{title}</h3>
+          <p>({category})</p>
           <p>{date}</p>
-          <p>{category}</p>
         </StyledDetails>
+        <StyledButtons>
+          <Button button={"Completed"} />
+          <Button button={"Important"} />
+          <Button button={"Edit"} />
+        </StyledButtons>
       </StyledHeading>
-      <ButtonContainer>
-        <Button button={'Completed'}/>
-        <Button button={'Edit'}/>
-        <Button button={'Important'}/>
-      </ButtonContainer>
       <StyledDescrition>
         <p>{description}</p>
       </StyledDescrition>
-    </StyledActivityCard>
+    </StyledActivityCard2>
   );
 }

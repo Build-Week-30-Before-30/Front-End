@@ -65,6 +65,11 @@ table {
   color: #09d3ac;
 }
 
+h1 {
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
 h2 {
   font-size: 2rem;
 }

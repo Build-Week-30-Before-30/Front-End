@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from "styled-components";
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   padding: 5px 10px;
   border: 1px solid lightgray;
   border-radius: 3px;
   margin: 10px 10px;
+  font-size: 0.8rem;
 `;
 
-export default function CardButton(props) {
+export function Button(props) {
   const {button} = props;
-  console.log(button);
   return (
     <StyledButton>{button}</StyledButton>
   )

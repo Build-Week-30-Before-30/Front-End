@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import ActivityList from './ActivityList';
+import Navigation from './Navigation';
 
 const dummyData = [
   {
@@ -51,9 +52,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        The Big Thirty
+        <h1>The Big Thirty</h1>
       </header>
-      
+      <Navigation />
       <ActivityList activityList={dummyData}/>
     </div>
   );
