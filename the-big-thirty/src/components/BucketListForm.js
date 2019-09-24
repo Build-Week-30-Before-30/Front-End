@@ -30,7 +30,7 @@ function BucketListForm({values}) {
     const handleSubmit = (e) => {
         e.preventDefault();
         if(category === '') {
-            alert('Please select a category');
+            alert('Please set a category for this item')
         } else {
             console.log({'category': category, 'date': itemDate, 'item': values.bucketListItem, 'itemDesc': values.bucketListDesc, 'private': privateItem, 'realtedLinks': values.relatedLinks.split(' ')});
             setCategory('');
@@ -39,8 +39,6 @@ function BucketListForm({values}) {
     }
     return (
         <div className='bucketListFormContainer'>
-            <h1>Add a Bucket List Item</h1>
-            <hr />
             <Form className='bucketListForm' onSubmit={handleSubmit}>
                 <Field
                 label='Bucket List Item'
@@ -68,6 +66,7 @@ function BucketListForm({values}) {
                         fullWidth
                         required
                         disableToolbar
+                        minDate={new Date()}
                         variant="inline"
                         format="MM/dd/yyyy"
                         margin="normal"
@@ -97,6 +96,7 @@ function BucketListForm({values}) {
                         <MenuItem value={'Events'}>Events</MenuItem>
                         <MenuItem value={'Family'}>Family</MenuItem>
                         <MenuItem value={'Career'}>Career</MenuItem>
+                        <MenuItem value={'Other'}>Other</MenuItem>
                     </Select>
                 </FormControl>
                 <Field
