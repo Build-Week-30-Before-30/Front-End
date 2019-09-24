@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Route } from "react-router-dom";
 import './App.css';
 import ActivityList from './ActivityList';
 import Navigation from './Navigation';
@@ -17,9 +18,12 @@ function App() {
         <h1>The Big Thirty</h1>
       </header>
       <Navigation onSearch={onSearch} searchTerm={searchTerm}/>
-      <ActivityList activityList=
-        {dummyData.filter(activity => activity.title.toLowerCase().includes(searchTerm.toLowerCase())
-        )}/>
+      <Route
+        path='/view-events'
+        render={() => <ActivityList activityList=
+          {dummyData.filter(activity => activity.title.toLowerCase().includes(searchTerm.toLowerCase())
+          )}/>}
+      />
     </div>
   );
 }

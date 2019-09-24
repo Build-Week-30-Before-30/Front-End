@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import SearchForm from "./SearchForm.js";
 
 const StyledNavigation = styled.div`
@@ -24,13 +24,16 @@ export default function Navigation(props) {
   return (
     <StyledNavigation>
       <div>
-        <Link to='/'><NavButton>Create Event</NavButton></Link>
-        <Link to='/'><NavButton>View Events</NavButton></Link>
+        <Link to='/create-event'><NavButton>Create Event</NavButton></Link>
+        <Link to='/view-events'><NavButton>View Events</NavButton></Link>
       </div>
-      <SearchForm onSearch={onSearch} searchTerm={searchTerm}/>
+      <Route
+        path='/view-events'
+        render={() => <SearchForm onSearch={onSearch} searchTerm={searchTerm}/>}
+      />
       <div>
-        <Link to='/'><NavButton>Create Account</NavButton></Link>
-        <Link to='/'><NavButton>Login</NavButton></Link>
+        <Link to='/create-account'><NavButton>Create Account</NavButton></Link>
+        <Link to='/login'><NavButton>Login</NavButton></Link>
       </div>
     </StyledNavigation>
   )
