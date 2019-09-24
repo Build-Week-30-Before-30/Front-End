@@ -13,27 +13,53 @@ const StyledActivityCard = styled.div`
   text-align: center;
 `;
 
+const StyledHeading = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  /* border: 1px solid red; */
+`;
 
+const StyledDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 50px;
+  width: 100px;
+  border-left: 1px solid lightgray;
+
+`;
+
+const ButtonContainer = styled.div`
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+`;
 
 const StyledDescrition = styled.div`
-  border-top: 1px solid lightgray;
+  padding: 10px;
+  text-align: left;
 `;
 
 export default function ActivityCard(props) {
   const { title, description, date, category } = props;
   return (
     <StyledActivityCard>
-      <div>
-        <h3>{title}</h3>
-      </div>
-      <div>
-        <p>{date}</p>
-        <p>{category}</p>
-      </div>
-      <StyledDescrition>
+      <StyledHeading>
+        <div>
+          <h3>{title}</h3>
+        </div>
+        <StyledDetails>
+          <p>{date}</p>
+          <p>{category}</p>
+        </StyledDetails>
+      </StyledHeading>
+      <ButtonContainer>
         <CardButton button={'Completed'}/>
         <CardButton button={'Edit'}/>
         <CardButton button={'Important'}/>
+      </ButtonContainer>
+      <StyledDescrition>
         <p>{description}</p>
       </StyledDescrition>
     </StyledActivityCard>

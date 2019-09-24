@@ -4,42 +4,42 @@ import ActivityList from './ActivityList';
 
 const dummyData = [
   {
-    title: 'skydiving1',
-    description: 'jumping out of a plane1',
-    date: '12 jun 2020',
-    category: 'adrenaline',
+    title: 'Skydiving',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    date: '12 Jun 2020',
+    category: 'Adventure',
     completed: false,
     links: ['link1', 'link2']
   },
   {
-    title: 'skydiving2',
-    description: 'jumping out of a plane2',
-    date: '12 jun 2020',
-    category: 'adrenaline',
+    title: 'Learn Japanese',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    date: '12 Jun 2020',
+    category: 'Education',
     completed: false,
     links: ['link1', 'link2']
   },
   {
-    title: 'skydiving3',
-    description: 'jumping out of a plane3',
-    date: '12 jun 2020',
-    category: 'adrenaline',
+    title: 'Visit the Grand Canyon',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    date: '12 Jun 2020',
+    category: 'Travel',
     completed: false,
     links: ['link1', 'link2']
   },
   {
-    title: 'skydiving4',
-    description: 'jumping out of a plane4',
-    date: '12 jun 2020',
-    category: 'adrenaline',
+    title: 'Go sea fishing',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    date: '12 Jun 2020',
+    category: 'Adventure',
     completed: false,
     links: ['link1', 'link2']
   },
   {
-    title: 'skydiving5',
-    description: 'jumping out of a plane5',
-    date: '12 jun 2020',
-    category: 'adrenaline',
+    title: 'Visit the Dead Sea',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+    date: '12 Jun 2020',
+    category: 'Travel',
     completed: false,
     links: ['link1', 'link2']
   },
@@ -53,6 +53,7 @@ function App() {
       <header className="App-header">
         The Big Thirty
       </header>
+      
       <ActivityList activityList={dummyData}/>
     </div>
   );

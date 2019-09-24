@@ -5,7 +5,7 @@ const StyledButton = styled.button`
   padding: 5px 10px;
   border: 1px solid lightgray;
   border-radius: 3px;
-  margin: 0 10px 20px 10px;
+  margin: 10px 10px;
 `;
 
 export default function CardButton(props) {
