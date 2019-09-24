@@ -4,6 +4,7 @@ import './App.css';
 import ActivityList from './ActivityList';
 import Navigation from './Navigation';
 import { dummyData } from "./dummydata";
+import BucketListForm from './components/BucketListForm';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <h1>The Big Thirty</h1>
       </header>
       <Navigation onSearch={onSearch} searchTerm={searchTerm}/>
+      <Route exact path='/create-event' component={BucketListForm} />
       <Route
         path='/view-events'
         render={() => <ActivityList activityList=

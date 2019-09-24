@@ -14,7 +14,7 @@ import * as Yup from 'yup';
 
 function BucketListForm({values}) {
     const [category, setCategory] = useState('');
-    const [itemDate, setItemDate] = useState(new Date('2019-09-23'));
+    const [itemDate, setItemDate] = useState(new Date());
     const [privateItem, setPrivateItem] = useState(false);
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const handleCategoryChange = (e) => {
@@ -133,7 +133,6 @@ const FormikBucketListForm = withFormik({
     validationSchema: Yup.object().shape({
         bucketListItem: Yup.string().required('You need to set a Bucket List Item'),
         bucketListDesc: Yup.string().required('Please provide a description for the bucket list item'),
-        categorySelect: Yup.string().required('Error')
     }),
 })(BucketListForm);
 
