@@ -31,6 +31,7 @@ export default function Navigation(props) {
         path='/view-events'
         render={() => <SearchForm onSearch={onSearch} searchTerm={searchTerm}/>}
       />
+      <Route path='/create-event' render={() => <h1 className='createItemHeader'>Add a Bucket List Item</h1>} />
       <div>
         <Link to='/create-account'><NavButton>Create Account</NavButton></Link>
         <Link to='/login'><NavButton>Login</NavButton></Link>
