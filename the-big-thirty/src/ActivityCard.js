@@ -8,7 +8,7 @@ const StyledActivityCard = styled.div`
   justify-content: space-between;
   margin: 15px 15px;
   width: 300px;
-  border: 1px solid lightgrey;
+  border: 2px solid lightgrey;
   border-radius: 10px;
   text-align: center;
 `;
@@ -34,11 +34,15 @@ const StyledDetails = styled.div`
 const ButtonContainer = styled.div`
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
+  background-color: #282c34;
+
+  /* padding: 5px 0; */
 `;
 
 const StyledDescrition = styled.div`
   padding: 10px;
   text-align: left;
+  background-color: lightgray;
 `;
 
 export default function ActivityCard(props) {

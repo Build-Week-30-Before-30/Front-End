@@ -14,7 +14,7 @@ const StyledActivityCard2 = styled.div`
 `;
 
 const StyledHeading = styled.div`
-  height: 200px;
+  height: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,16 +23,26 @@ const StyledHeading = styled.div`
 `;
 
 const StyledDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+  justify-content: space-evenly;
+  align-items: flex-start;
   text-align: left;
+  /* background-color: red; */
 `;
 
-const StyledButtons = styled.div`
+const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 50px;
+  height: 100%;
   width: 100px;
   border-left: 1px solid lightgray;
+  border-radius: 0 10px 0 0;
+  background-color: #282c34;
+
 `;
 
 const StyledDescrition = styled.div`
@@ -51,11 +61,11 @@ export default function ActivityCard2(props) {
           <p>({category})</p>
           <p>{date}</p>
         </StyledDetails>
-        <StyledButtons>
+        <ButtonContainer>
           <Button button={"Completed"} />
           <Button button={"Important"} />
           <Button button={"Edit"} />
-        </StyledButtons>
+        </ButtonContainer>
       </StyledHeading>
       <StyledDescrition>
         <p>{description}</p>
