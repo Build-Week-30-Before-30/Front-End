@@ -29,6 +29,7 @@ export default function ActivityList(props) {
             category={activity.category}
             completed={activity.completed}
           />
+          // console.log(activity)
         ))}
       </StyledActivityList>
 
