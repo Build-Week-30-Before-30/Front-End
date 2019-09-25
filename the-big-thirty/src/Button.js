@@ -3,18 +3,24 @@ import styled from "styled-components";
 
 export const StyledButton = styled.button`
   padding: 5px 10px;
-  border: 1px solid lightgray;
+  /* flex-grow: 1; */
+  /* border: 1px solid lightgray; */
   border-radius: 3px;
-  margin: 10px 10px;
+  margin: 10px 0;
   font-size: 0.8rem;
+  background-color: #ba9058;
   &#Completed {
-    background-color: ${props => (props.completed ? "green" : "white")};
+    background-color: ${props => (props.completed ? "green" : "#ba9058")};
   }
   &#Edit {
-    background-color: ${props => (props.edit ? "green" : "white")};
+    background-color: ${props => (props.edit ? "green" : "#ba9058")};
   }
   &#Important {
-    background-color: ${props => (props.important ? "green" : "white")};
+    background-color: ${props => (props.important ? "red" : "#ba9058")};
+  }
+  &#Private {
+    background-color: ${props => (props.private ? "black" : "#ba9058")};
+    color: ${props => (props.private ? "white" : "black")};
   }
 `;
 
@@ -24,6 +30,7 @@ export function Button(props) {
   const [eventCompleted, setEventCompleted] = useState(false);
   const [editEvent, setEditEvent] = useState(false);
   const [eventImportant, setEventImportant] = useState(false);
+  const [eventPrivate, setEventPrivate] = useState(false);
 
   function toggle(event) {
     // debugger
@@ -34,6 +41,8 @@ export function Button(props) {
       setEditEvent(!editEvent);
     } else if (event.target.id === "Important") {
       setEventImportant(!eventImportant);
+    } else if (event.target.id === "Private") {
+      setEventPrivate(!eventPrivate);
     }
   }
 
@@ -44,6 +53,7 @@ export function Button(props) {
       completed={eventCompleted}
       edit={editEvent}
       important={eventImportant}
+      private={eventPrivate}
     >
       {button}
     </StyledButton>

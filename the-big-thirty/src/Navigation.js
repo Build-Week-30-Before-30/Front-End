@@ -4,7 +4,7 @@ import { Link, Route } from "react-router-dom";
 import SearchForm from "./SearchForm.js";
 
 const StyledNavigation = styled.div`
-  background-color: lightgray;
+  background-color: #ba9058;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,9 +14,10 @@ const StyledNavigation = styled.div`
 const NavButton = styled.button`
   margin: .8rem;
   padding: 0.6rem 1.6rem;
-  font-size: 1rem;
-  color: white;
-  background-color: #282c34;
+  border: none;
+  font-size: 1.2rem;
+  color: #9ebbc4;
+  background-color: #ba9058;
 `;
 
 export default function Navigation(props) {

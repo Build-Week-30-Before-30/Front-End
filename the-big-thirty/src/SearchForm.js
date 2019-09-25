@@ -5,7 +5,7 @@ const StyledInput = styled.input`
   width: 250px;
   font-size: 1rem;
   margin: 0.8rem;
-  padding: 0.6rem;
+  padding: 0.4rem;
 `;
 
 export default function SearchForm(props) {

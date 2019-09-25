@@ -1,6 +1,6 @@
 import React from "react";
 import ActivityCard from "./ActivityCard";
-import ActivityCard2 from "./ActivityCard2";
+// import ActivityCard2 from "./ActivityCard2";
 import styled from 'styled-components';
 
 const StyledActivityList = styled.div`
@@ -15,7 +15,7 @@ const StyledH2 = styled.h2`
 
 export default function ActivityList(props) {
   const { activityList } = props;
-  console.log(activityList);
+  // console.log(activityList);
   return (
     <div>
       <StyledH2>Activities</StyledH2>
