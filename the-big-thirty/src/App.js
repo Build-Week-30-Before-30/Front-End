@@ -6,14 +6,6 @@ import Navigation from './Navigation';
 import { dummyData } from "./dummydata";
 import BucketListForm from './components/BucketListForm';
 
-
-cont Nav = styled.nav`
-
-text-align:center;
-padding:30px
-
-`
-
 function App() {
 
   const [searchTerm, setSearchTerm] = useState('');
