@@ -39,8 +39,6 @@ function BucketListForm({values}) {
     }
     return (
         <div className='bucketListFormContainer'>
-            <h1>Add a Bucket List Item</h1>
-            <hr />
             <Form className='bucketListForm' onSubmit={handleSubmit}>
                 <Field
                 label='Bucket List Item'
