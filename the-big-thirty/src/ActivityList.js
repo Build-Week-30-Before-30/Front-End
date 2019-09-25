@@ -32,7 +32,7 @@ export default function ActivityList(props) {
         ))}
       </StyledActivityList>
 
-      <StyledActivityList>
+      {/* <StyledActivityList>
         {activityList.map(activity => (
           <ActivityCard2 
             key={activity.title}
@@ -43,7 +43,7 @@ export default function ActivityList(props) {
             completed={activity.completed}
           />
         ))}
-      </StyledActivityList>
+      </StyledActivityList> */}
     </div>
   );
 }
