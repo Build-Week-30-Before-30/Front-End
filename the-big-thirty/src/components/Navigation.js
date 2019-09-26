@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link, Route } from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
 import SearchForm from "./SearchForm.js";
 
 const StyledNavigation = styled.div`
@@ -8,16 +8,7 @@ const StyledNavigation = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-`;
-
-const NavButton = styled.button`
-  margin: .8rem;
-  padding: 0.6rem 1.6rem;
-  border: none;
-  font-size: 1.2rem;
-  color: #9ebbc4;
-  background-color: #ba9058;
+  padding: 0 0 1% 0;
 `;
 
 export default function Navigation(props) {
@@ -26,17 +17,19 @@ export default function Navigation(props) {
   return (
     <StyledNavigation>
       <div>
-        <Link to='/create-event'><NavButton>Create Event</NavButton></Link>
-        <Link to='/view-events'><NavButton>View Events</NavButton></Link>
+        <NavLink className='navLink' to='/create-event'>Create Event</NavLink>
+        <NavLink className='navLink' to='/view-events'>View Events</NavLink>
       </div>
       <Route
         path='/view-events'
         render={() => <SearchForm onSearch={onSearch} searchTerm={searchTerm}/>}
       />
       <Route path='/create-event' render={() => <h2 className='createItemHeader'>Add a Bucket List Item</h2>} />
+      <Route path='/register' render={() => <h2>Create an account</h2>} />
+      <Route exact path='/' render={() => <h2>Login</h2>} />
       <div>
-        <Link to='/create-account'><NavButton>Create Account</NavButton></Link>
-        <Link to='/login'><NavButton>Login</NavButton></Link>
+        <NavLink className='navLink' to='/register'>Create Account</NavLink>
+        <NavLink className='navLink' exact to='/'>Login</NavLink>
       </div>
     </StyledNavigation>
   )
