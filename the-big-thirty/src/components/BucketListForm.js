@@ -38,8 +38,8 @@ function BucketListForm({values}) {
         }
     }
     return (
-        <div className='bucketListFormContainer'>
-            <Form className='bucketListForm' onSubmit={handleSubmit}>
+        <div>
+            <Form className='formContainer' onSubmit={handleSubmit}>
                 <Field
                 label='Bucket List Item'
                 name='bucketListItem'

@@ -69,11 +69,27 @@ html {
   color: #09d3ac;
 }
 
-.bucketListForm {
+.formContainer {
   display: flex;
   flex-direction: column;
   width: 33%;
   margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active {
+  text-decoration: underline !important;
+}
+
+.navLink {
+  margin: .8rem;
+  padding: 0.6rem 1.6rem;
+  font-size: 1.2rem;
+  color: #9ebbc4;
+  background-color: #ba9058;
 }
 
 #formControl > label:nth-child(1) {
