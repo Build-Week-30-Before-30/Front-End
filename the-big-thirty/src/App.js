@@ -8,6 +8,7 @@ import BucketListForm from './components/BucketListForm';
 import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
 import {axioswithAuth} from './Utilities/axioswithAuth';
+import PrivateRoute from './Utilities/PrivateRoute';
 function App() {
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -23,7 +24,7 @@ function App() {
       <Navigation onSearch={onSearch} searchTerm={searchTerm}/>
       <PrivateRoute exact path='/create-event' component={BucketListForm} />
       <Route path='/register' component={RegisterForm} />
-      <Route exact path='/' component={LoginForm} />
+      <Route exact path='/protected' component={LoginForm} />
       <Route
         path='/view-events'
         render={() => <ActivityList activityList=
