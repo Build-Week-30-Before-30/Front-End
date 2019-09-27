@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink, Route } from "react-router-dom";
 import SearchForm from "./SearchForm.js";
-
+import { axiosWithAuth } from '../Utilities/axiosWithAuth';
 const StyledNavigation = styled.div`
   background-color: #ba9058;
   display: flex;

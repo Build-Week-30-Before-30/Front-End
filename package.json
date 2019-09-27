@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.11.1"
+    "@fortawesome/fontawesome-free": "^5.11.1",
+    "axios": "^0.19.0",
+    "facebook-login": "^1.4.0",
+    "google-login": "^1.0.3",
+    "react": "^16.9.0"
   }
 }

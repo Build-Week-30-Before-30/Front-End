@@ -7,7 +7,7 @@ import { dummyData } from "./dummydata";
 import BucketListForm from './components/BucketListForm';
 import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
-
+import {axioswithAuth} from './Utilities/axioswithAuth';
 function App() {
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -21,7 +21,7 @@ function App() {
         <h1>The Big Thirty</h1>
       </header>
       <Navigation onSearch={onSearch} searchTerm={searchTerm}/>
-      <Route exact path='/create-event' component={BucketListForm} />
+      <PrivateRoute exact path='/create-event' component={BucketListForm} />
       <Route path='/register' component={RegisterForm} />
       <Route exact path='/' component={LoginForm} />
       <Route
