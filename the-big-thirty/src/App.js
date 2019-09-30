@@ -9,6 +9,8 @@ import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
 import {axioswithAuth} from './Utilities/axioswithAuth';
 import PrivateRoute from './Utilities/PrivateRoute';
+import { fetchItem } from './Store/actions/actions';
+
 function App() {
 
   const [searchTerm, setSearchTerm] = useState('');

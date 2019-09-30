@@ -1,8 +1,6 @@
-import { newItem } from './components/action';
+
  import { connect } from 'react-redux';
 import React, { Component } from 'react';
-
-
 
 class ThirtyByThirty extends Component {
 
